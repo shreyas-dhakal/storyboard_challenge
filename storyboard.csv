@@ -1,0 +1,182 @@
+Slide Content,Dialogue
+"**Slide 1: Title Slide**
+
+- **Course Title:** The Markdown Guide
+- **Subtitle:** Simplifying Text Formatting
+- **Author:** Matt Cone
+
+---","Welcome everyone! This first slide outlines our course, titled 'The Markdown Guide.' You'll see the core emphasis is on simplifying text formatting. The author, Matt Cone, has dedicated this guide to help new and experienced users alike. By the end of this course, I hope you feel confident in using Markdown for all sorts of writing."
+"**Slide 2: Course Outline**
+
+- **Topics Covered:**
+  1. Getting Started with Markdown
+  2. Applying Markdown in Various Contexts
+  3. Key Markdown Syntax
+  4. Understanding Markdown Quirks
+  5. Engaging with the Markdown Community
+  6. Markdown Cheat Sheet
+  7. Exploring Markdown Editors
+  8. Use of Markdown for Presentations
+  9. Markdown for Documentation
+  10. Formatting Reference-Style Links
+  11. Escaping Characters in Markdown
+  12. Extended Syntax in Markdown
+  13. Escaping Pipe Characters in Tables
+  14. Fenced Code Blocks
+  15. Syntax Highlighting
+  16. Custom Heading IDs
+  17. Definition Lists
+
+---","Here is our detailed course outline, showcasing the many topics we'll cover, from basic syntax to advanced extensions. We'll explore everything from reference links to code blocks. As we move through these lessons, you'll see how flexible Markdown can be, and how many different areas it applies to."
+"**Slide 3: Getting Started with Markdown**
+
+- **Overview:**
+  - Markdown is a lightweight markup language designed for easy text conversion to HTML.
+- **Functionality:**
+  - Prioritizes simplicity and readability using a plain-text format similar to HTML.
+- **Use Cases:**
+  - Ideal for technical writing, documentation, and note-taking.
+
+---","Markdown is essentially a clean, readable way to create formatted text without needing HTML tags. Because it's so lightweight, it can be easily converted into virtually any format. Imagine writing an article in plain text and then seamlessly transforming it into a well-styled webpage—Markdown lets you do that effortlessly."
+"**Slide 4: Applying Markdown in Various Contexts**
+
+- **Web Development:**
+  - Enhances static site generators like Jekyll and blot.im.
+- **Professional Publishing:**
+  - Suitable for creating digital books and slideshows.
+- **Note-Taking Apps:**
+  - Compatible with applications such as Bear and Simplenote.
+
+---","Markdown is widely used in web development, especially for static site generators like Jekyll. It's also popular in publishing e-books and even for professional journals, thanks to its simplicity. For notetaking, many apps now fully embrace Markdown, making it easy to keep consistency across platforms."
+"**Slide 5: Key Markdown Syntax**
+
+- **Headers:**
+  - Create headers with `#`, `##`, `###`, to denote levels.
+- **Lists:**
+  - Ordered lists: `1.`, `2.`, `3.`
+  - Unordered lists: `-`, `*`, or `+`
+- **Text Formatting:**
+  - **Bold:** `**bold**`
+  - *Italic:* `*italic*` or `_italic_`
+- **Links & Images:**
+  - Links: `[link text](URL)`
+  - Images: `![alt text](image.jpg)`
+- **Code Blocks and Quotes:**
+  - Inline code: `` `code` ``
+  - Blockquotes: `> Quote`
+
+---","We have key syntaxes in Markdown like headers that start with one or more hashes, lists that you can make ordered or unordered, and text formatting for bold and italics. You can also add hyperlinks very easily, insert images without fuss, and highlight code snippets in-line or in separate blocks. All of this is intended to keep your text both readable and versatile."
+"**Slide 6: Understanding Markdown Quirks**
+
+- **Best Practices:**
+  - Address variations in line break handling.
+- **GitHub Flavored Markdown:**
+  - Provides additional features and syntax extensions.
+
+---","Markdown can behave a little differently depending on the platform or flavor you use. GitHub Flavored Markdown, for instance, has extra features like task lists and tables. It's good practice to familiarize yourself with those differences so your documents render correctly wherever they're viewed."
+"**Slide 7: Engaging with the Markdown Community**
+
+- **Contribution & Interaction:**
+  - Adhere to community guidelines while collaborating.
+- **Issue Reporting:**
+  - Participate via forums like GitHub for solving common issues.
+
+---","As you learn, it’s helpful to connect with others in the Markdown community. You'll find guidelines and etiquette for how best to contribute changes or ask questions. Engaging with community-driven platforms like GitHub or dedicated forums can streamline your learning and help you keep up with new developments."
+"**Slide 8: Markdown Cheat Sheet**
+
+- **Syntax Overview:**
+  - A concise reference for elements like headings, lists, and quotes.
+
+---","A Markdown cheat sheet is like a quick reference for everything from headings to code blocks. It's perfect to have on hand, especially for beginners who might forget certain syntax. Keep one bookmarked or even print it out, so you can quickly look up how to create a footnote or format a link."
+"**Slide 9: Exploring Markdown Editors**
+
+- **Popular Editors:**
+  - Web-based: Dillinger
+  - macOS: iA Writer
+  - Windows: MarkdownPad
+
+---","There are numerous dedicated Markdown editors, each with its own benefits. Many provide real-time previews, which is very handy. Dillinger is an accessible web-based editor, while iA Writer on macOS is known for its clean, distraction-free writing environment. Try out a few and see which workflow suits you."
+"**Slide 10: Use of Markdown for Presentations**
+
+- **Creation Tools:**
+  - Use Remark and Deckset to build engaging presentations.
+
+---","Yes, Markdown can also power your presentations! Tools like Remark or Deckset allow you to write slides in plain text. This means less time fiddling with formatting, and more time focusing on the content itself. It's an effective way to make slides both quick to produce and easy to share."
+"**Slide 11: Markdown for Documentation**
+
+- **Advantages:**
+  - Facilitates structured documentation with tools like MkDocs and Read the Docs.
+
+---","For documentation, Markdown has become the go-to choice. It's easy to keep manuals and project documentation consistent. And with platforms like MkDocs or Read the Docs, you can automatically generate professional results directly from your Markdown files."
+"**Slide 12: Formatting Reference-Style Links**
+
+- **Construction:**
+  - Format: `[linked text][label]` with defined references `[label]: URL`.
+
+---","Reference-style links allow you to place the full URL reference elsewhere in your document, which cleans up your text. This layout can come in especially handy for large documents with lots of links, since it keeps the main body more readable."
+"**Slide 13: Escaping Characters in Markdown**
+
+- **Purpose:**
+  - Use `\` to prevent formatting, e.g., `\*not a list*`
+
+---","Escaping characters is key when you want to literally display Markdown syntax. For instance, if you don’t escape asterisks, they might turn your text italic or bold. Using a backslash before these special characters prevents Markdown from trying to interpret them as formatting codes."
+"**Slide 14: Extended Syntax in Markdown**
+
+- **Overview:**
+  - Supports tables, footnotes, task lists.
+- **Table Example:**
+  ```markdown
+  | Syntax    | Description |
+  | --------- | ----------- |
+  | Header    | Title       |
+  | Paragraph | Text        |
+  ```
+- **Task List Example:**
+  - `[x] Item done`
+  - `[ ] Item pending`
+
+---","Extended syntax covers helpful extras like tables, footnotes, and task lists. Tables let you keep data nice and neat, footnotes help with quick referencing or citations, and task lists give an interactive feel if you’re using GitHub or another supported viewer. All of these are super helpful in everyday writing."
+"**Slide 15: Escaping Pipe Characters in Tables**
+
+- **HTML Character Code:**
+  - Use `&#124;` in tables to display `|`.
+
+---","When you work with tables, remember that the pipe character has special meaning. To literally show a pipe, you can replace it with its HTML entity code, &#124;, ensuring that Markdown doesn’t treat it like a cell delimiter in your table rows."
+"**Slide 16: Fenced Code Blocks**
+
+- **Markdown Syntax:**
+  - Use triple backticks ``` or tildes for blocks.
+- **Example:**
+  ```json
+  {
+    ""firstName"": ""John"",
+    ""lastName"": ""Smith"",
+    ""age"": 25
+  }
+  ```
+
+---","Fenced code blocks with triple backticks or tildes let you display multiple lines of code without worrying about indentation. Just open with ``` or ~~~, specify the language if you want syntax highlighting, and then close the fence. This is particularly useful for writing technical documentation."
+"**Slide 17: Syntax Highlighting**
+
+- **Enhancement:**
+  - Define language for improved syntax highlighting in code blocks.
+
+---","Syntax highlighting is a huge benefit when reading code examples. By naming the language right after your opening backticks, you’re telling Markdown to apply color and style highlighting for that language, making the code more comprehensible and visually appealing."
+"**Slide 18: Custom Heading IDs**
+
+- **Assigning IDs:**
+  - Syntax: `### Heading {#custom-id}`
+- **Usage Example:**
+  - Link: `[Linking to heading](#custom-id)`
+
+---","If you want to customize how readers link to a particular header, add a custom heading ID. It gives you control over the clickable anchor for that section, which is especially useful in long documents or if you want explicit reference IDs."
+"**Slide 19: Definition Lists**
+
+- **Structure:**
+  - Term and definition side by side.
+  ```
+  Term 1
+  : Definition 1
+  ```
+
+---","Definition lists let you format terms and their explanations in a clean, structured way. This is ideal for glossaries, FAQs, or any context where you need a term and its definition side by side, all still within simple Markdown syntax."
