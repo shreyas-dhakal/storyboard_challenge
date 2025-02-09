@@ -1,33 +1,72 @@
 
-
+  
+  
+  
 
 # MOOC Storyboard Generator
+
 A simple AI agent-based program to generate presentation slides and lecturer dialogues from a manual.
 
-## How to run
-Clone the project into your local machine and navigate into the directory.
+  
+
+## Setup
+
+ 1. Clone the project into your local machine and navigate into the directory.
+
+
+
 ```
+
 git clone https://github.com/shreyas-dhakal/storyboard_challenge
+
 cd ./storyboard_challenge
+
 ```
 
+  
+  
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install libraries from requirements.txt
+2. Use the package manager [pip](https://pip.pypa.io/en/stable/) to install libraries from requirements.txt
+
+  
 
 ```bash
-pip install -r requirements.txt
+
+pip  install  -r  requirements.txt
+
 ```
 
-Then, run the program.
+  
+
+3. Then, run the program.
+
 ```bash
-python storyboard_generator.py
+
+python  storyboard_generator.py
+
 ```
-Enter your OpenAI API Key into the prompt and you're good to go.
+
+4. Enter your OpenAI API Key into the prompt and you're good to go.
+
+  
 
 ## Methodology
 
-The program uses Langchain Refine method which handles the large document effectively without overloading the API Requests. It iteratively extracts key points, code snippets and explanations that could be useful for the presentation with multiple API calls to the GPT-4o model. Then to further improve the contents of the slide, it goes through a refine process which reviews the extracted information from its earlier calls to generate a final presentation. Furthermore, the slide content is then sent as an input to o1 model. This model generates lecturer dialogues with much more reasoning than the GPT-4o model. The response received is a Pydantic object which contains keys: slides and dialogues. The data is finally converted into csv and exported.
+  
 
-## Output 
-The pre-run output is stored as storyboard.csv. To view the results in a convinient way, I have stored the output as output_table.html.
+The program makes use of Langchain and OpenAI models like GPT-4o to create the slide contents, o1 model to generate the lecturer dialogues and text-embedding-3-large model for embedding the document.
 
+A brief flow of how the code works:
+
+ 1. The models for embedding, parsing and generating are loaded.
+ 2. The document is loaded, parsed and a vectorstore is created to store the embedded document.
+ 3. The document is split into chunks.
+ 4. The splitted documents are first summarized iteratively to extract key points, headings and code snippets for the presentation and then, it is further refined to generate presentation slides that cover the important aspects of the document. This is all done by using multiple API calls to the GPT-4o model using a [Refine](https://python.langchain.com/v0.1/docs/use_cases/summarization/#option-3-refine) summarizing chain. The Refine method provides superior output than other summarization methods.
+ 5. To reduce API calls, the dialogues are generated using a o1 model and combined together with the slide contents to parse the output as a Pydantic custom object within a same LLM invocation.
+ 6. Finally, the output is exported as a CSV file by appending corresponding slide contents and lecturer dialogues based on its slide number.
+
+  
+
+## Output
+
+The pre-run output is stored as storyboard.csv. To view the results quickly, I have stored the output as output_table.html as the code takes a long time to run.

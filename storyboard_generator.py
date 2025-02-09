@@ -48,7 +48,7 @@ class PresentationGenerator:
 
     def generate(self, docs):
         #Generate slide using Refine method to handle large amount of data iteratively.
-        print("Generating slides...")
+        print("Generating slides...(this may take a large amount of time)")
         prompt_template = """
         You are an expert in creating presentation slides for MOOC based on context provided.
         Your goal is to extract key-points, explanations and syntax for the presentation:
@@ -127,6 +127,7 @@ class StoryboardConverter:
         print(f"Saved the storyboard as {filename}")
 
 def main():
+    #To check for valid OpenAI API Key
     while True:
         api_key = getpass.getpass("Enter your OpenAI API Key: ")
         if OpenAIKeyValidator.validate(api_key):
@@ -139,8 +140,14 @@ def main():
     llm = ChatOpenAI(model="gpt-4o")
     parse_llm = ChatOpenAI(model='o1')
 
-    #Input documents.
-    loader = PyPDFLoader("manual.pdf")
+    #Input document for processing.
+    pdf_files = [f for f in os.listdir() if f.endswith(".pdf")]
+    if pdf_files:
+        manual_name = pdf_files[0]
+        loader = PyPDFLoader(manual_name)
+        print(f"Loaded: {manual_name}")
+    else:
+        print("No PDF file found in the directory.")
     parser = DocumentParser()
     docs = parser.parse(loader)
 
@@ -152,7 +159,7 @@ def main():
 
     converter = StoryboardConverter()
     df = converter.convert_to_table(presentation)
-    #Save to csv
+    #Save as a csv file
     converter.save_to_csv(df)
 
 if __name__ == "__main__":
