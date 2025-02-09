@@ -7,7 +7,7 @@ A simple AI agent-based program to generate presentation slides and lecturer dia
 ## How to run
 Clone the project into your local machine and navigate into the directory.
 ```
-git clone 
+git clone https://github.com/shreyas-dhakal/storyboard_challenge
 cd ./storyboard_challenge
 ```
 
