@@ -11,6 +11,7 @@ git clone https://github.com/shreyas-dhakal/storyboard_challenge
 cd ./storyboard_challenge
 ```
 
+
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install libraries from requirements.txt
 
 ```bash
